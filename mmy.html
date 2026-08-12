@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>user Details</title>
+<script>
+
+
+function show()
+{
+
+	 var firstname=localStorage.getItem("firstname");
+	 document.getElementById("mmy").innerHTML = "<b>The Details enterd by the user</b><br>";
+	 document.getElementById("mmy").innerHTML += "The first name is:<b>"+firstname+"</b><br>";
+
+
+	 var middlename=localStorage.getItem("middlename");
+	 document.getElementById("mmy").innerHTML += "The middlename is:<b>"+middlename+"</b><br>";
+
+
+	 var lastname=localStorage.getItem("lastname");
+	 document.getElementById("mmy").innerHTML += "The lastname is:<b>"+lastname+"</b><br>";
+
+	
+	 var email=localStorage.getItem("email");
+	 document.getElementById("mmy").innerHTML += "The email is:<b>"+email+"</b><br>";
+	
+	 var mobilenumber=localStorage.getItem("mobilenumber");
+	 document.getElementById("mmy").innerHTML += "The mobilenumber is:<b>"+mobilenumber+"</b><br>";
+
+	var gender=localStorage.getItem("gender");
+	document.getElementById("mmy").innerHTML += "The gender is:<b>"+gender+"</b><br>";
+}
+</script>
+</head>
+<body onload="show()">
+<p id="mmy">
+</p>
+</body>
+</html>
+
+
+	
+
+
+	

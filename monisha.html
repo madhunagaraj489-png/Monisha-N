@@ -1,0 +1,157 @@
+<html>
+<head>
+<title> Registration form </title>
+<style>
+body
+{
+background-color:skyblue;
+}
+.coloring
+{
+background-color:pink;
+color:green;
+}
+</style>
+<script>
+
+function show()
+{
+ 	var firstname=document.getElementById("firstname").value;
+	localStorage.setItem("firstname",firstname);
+	var res=firstname.match(/[a-zA-Z]+/);
+	alert(res);
+	if(!res)
+        {  
+   	  alert("enter valid firstname");
+        }
+	else
+  	  alert("Its a valid firstname");
+
+	var middlename=document.getElementById("middlename").value;
+	localStorage.setItem("middlename",middlename);
+	var res=middlename.match(/[a-zA-Z]+/);
+	alert(res);
+	if(!res)
+	{
+  	 alert("enter valid middlename");
+ 
+	}
+	else
+ 	 alert("Its a valid middlename");
+
+	var lastname=document.getElementById("lastname").value;
+	localStorage.setItem("lastname",lastname);
+	var res=lastname.match(/[a-zA-Z]+/);
+	alert(res);
+	if(!res)
+	{
+  	 alert("enter valid lastname");
+  
+	}
+	else
+  	 alert("Its a valid lastname");
+
+	var email=document.getElementById("email").value;
+	localStorage.setItem("email",email);
+	var res=email.match(/[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+/);
+	alert(res);
+	if(!res)
+	{
+ 	 alert("enter valid email");
+
+	}
+	else
+  	 alert("Its a valid email");
+
+	var mobilenumber=document.getElementById("mobilenumber").value;
+	localStorage.setItem("mobilenumber",mobilenumber);
+	var res=mobilenumber.match(/[6-9][0-9]{9}/);
+	alert(res);
+	if(!res)
+	{
+ 	 alert("enter valid mobilenumber");
+  
+	}
+	else
+  	 alert("Its a valid mobilenumber");
+
+	
+	var gndr=document.form['reg'].gender.value;
+	alert(gndr);
+        var gender=document.getElementById("male").value;
+	var gender=document.getElementById("female").value;
+	localStorage.setItem("gender",gender);
+	var res=gender.match(/[male|female|]/);
+	alert(gndr);
+	if(!gndr)
+	{
+  	 alert("enter valid gender");
+ 
+	}
+	else
+  	 alert("Its a valid gender");
+}
+
+</script>
+</head>
+<body>
+<h1 align="center"> Registration Form</h1>
+<form action="mmy.html" name="reg">
+<table align="center" cellpadding="6" border="1" style="background-color:lightgreen";>
+
+<tr>
+<td>firstname</td>
+<td><input type="text" name="firstname" id="firstname"></td>
+</tr>
+
+<tr>
+<td>middlename</td>
+<td><input type="text" name="middlename" id="middlename"></td>
+</tr>
+
+<tr>
+<td>lastname</td>
+<td><input type="text" name="lastname" id="lastname"></td>
+</tr>
+
+<tr>
+<td>email</td>
+<td><input type="email" name="email" id="email"></td>
+</tr>
+
+<tr>
+<td>mobilenumber</td>
+<td><input type="tel" name="mobilenumber" id="mobilenumber"></td>
+</tr>
+
+<tr>
+<td>gender</td>
+<td>
+<input type="radio" name="gender" id="male" value="male">male
+<input type="radio" name="gender" id="female" value="female">female
+</td>
+</tr>
+
+<tr>
+<td colspan="3" align="center">
+<input class="coloring" type="submit" value="submit" onclick="show()">
+</td>
+</tr>
+</center>d
+</form>
+</body>
+</html>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

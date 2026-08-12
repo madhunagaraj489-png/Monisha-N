@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>login form</title>
+<style>
+body
+{
+  background-color:orange;
+}
+table{
+ border-collapse:collapse;
+}
+td{
+ padding:8px;
+}
+button{
+ padding:8px 15px;
+}
+  
+</style>
+<script>
+function check()
+{
+   var username=document.getElementById("username").value;
+   var password=document.getElementById("password").value;
+
+if(username==" ")
+{
+ 	alert("Enter username");
+	return false;
+}
+if(password==" ")
+{
+	alert("Enter password");
+	return false;
+}
+	var correctusername="monisha";
+	var correctpassword="monisha0418";
+
+	if(username==correctusername && password==correctpassword)
+{
+	localStorage.setItem("username",username);
+	localStorage.setItem("password",password);
+
+	alert("Login Succesful");
+	return true;
+}
+else
+{	
+	alert("Login UnSuccessful");
+	return false;
+ }
+}
+
+</script>
+</head>
+<body>
+
+<center>
+
+<h1>Login Form</h1>
+
+<form action="hii.html" onsubmit="return check()">
+<table border="1" bgcolor="lanvenderblush">
+
+<tr>
+<td>username</td>
+<td>
+<input type="text" id="username" name="username">
+</td>
+</tr>
+
+<tr>
+<td>password</td>
+<td>
+<input type="text" id="password" name="password">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="login">
+</td>
+</tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>
+
+
